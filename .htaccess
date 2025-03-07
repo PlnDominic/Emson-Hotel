@@ -1,0 +1,18 @@
+# Enable Node.js application
+AddHandler application/x-httpd-php .php
+DirectoryIndex index.html
+Options -MultiViews
+
+# Rewrite rules
+RewriteEngine On
+RewriteBase /
+
+# If the request is not for a file or directory
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+# For API requests
+RewriteRule ^api/(.*)$ server/server.js [L]
+
+# For all other requests, serve the React app
+RewriteRule ^(.*)$ index.html [L]

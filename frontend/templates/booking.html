@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Now - Lavimac Royal Hotel</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="icon" type="image/jpg" href="{{ url_for('static', filename='img/logo.jpg') }}">
+</head>
+<body>
+    <div class="top-bar">
+        <div class="contact-info">
+            <span><i class="fas fa-phone"></i> +233 (0)248-676-262</span>
+            <span><i class="fas fa-map-marker-alt"></i> Oduom Anwomaso</span>
+        </div>
+        <div class="user-actions">
+            <a href="#" class="my-account"><i class="fas fa-user"></i> My Account</a>
+            <a href="#" class="book-now"><i class="fas fa-calendar-alt"></i> Book Now</a>
+        </div>
+    </div>
+
+    <header>
+        <img src="{{ url_for('static', filename='img/logo.jpg') }}" alt="Lavimac Royal Hotel" class="logo1">
+        <h1 class="kings">Lavimac Royal Hotel</h1>
+        <div class="">
+            <nav>
+                <a href="index.html">HOME</a>
+                <a href="rooms.html">ROOMS</a>
+                <a href="facilities.html">FACILITIES</a>
+                <a href="contact.html">CONTACT US</a>
+            </nav>
+        </div>
+    </header>
+    <div class="header">
+        <nav>
+            <a href="index.html">HOME</a>
+            <a href="rooms.html">ROOMS</a>
+            <a href="facilities.html">FACILITIES</a>
+            <a href="contact.html">CONTACT US</a>
+        </nav>
+    </div>
+
+    <div class="booking-steps">
+        <div class="step active">1. Select Date</div>
+        <div class="step">2. Select Room</div>
+        <div class="step">3. Payment</div>
+        <div class="step">4. Complete</div>
+    </div>
+
+    <div class="booking-container">
+        <div class="reservation-panel">
+            <h2 style="color: white;">Your Reservation</h2>
+            <div class="form-group">
+                <label style="color: white;">Hotel</label>
+                <select name="hotel" id="hotel-select">
+                    <option value="">Select Hotel</option>
+                    <option value="lavimac">Lavimac Royal Hotel</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label style="color: white;">Rooms</label>
+                <select name="rooms" id="room-select">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                </select>
+            </div>
+            <div class="room-details">
+                <h3 style="color: white;">Room 1</h3>
+                <div class="guest-selector">
+                    <div class="guest-type">
+                        <label style="color: white;">Adult</label>
+                        <select name="adult" id="adult-select">
+                            <option value="0">0</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                        </select>
+                    </div>
+                    <div class="guest-type">
+                        <label style="color: white;">Child</label>
+                        <select name="child" id="child-select">
+                            <option value="0">0</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <button class="search-btn" id="search-button" disabled>Search</button>
+            <div id="no-rooms-message" style="display: none;">No rooms available</div>
+        </div>
+
+        <div class="calendar-panel">
+            <div class="calendar-header">
+                <button class="prev-month"><i class="fas fa-chevron-left"></i></button>
+                <div class="calendar-title">
+                    <span style="color: white;">January 2025</span>
+                    <span style="color: white;">February 2025</span>
+                </div>
+                <button class="next-month"><i class="fas fa-chevron-right"></i></button>
+            </div>
+            <div class="calendar-grid">
+                <div class="calendar">
+                    <!-- Calendar content will be generated by JavaScript -->
+                </div>
+            </div>
+            <div class="date-range-display">
+                <!-- Date range will be displayed here -->
+            </div>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>

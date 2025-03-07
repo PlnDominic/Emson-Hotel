@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Emson Hotel, a luxurious stay in Ejisu Ampabame.">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' https://cdnjs.cloudflare.com; script-src 'self' 'unsafe-inline' 'unsafe-eval'; style-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com; font-src 'self' data: https://cdnjs.cloudflare.com; connect-src 'self' http://localhost:5001 http://127.0.0.1:5001;">
+    <meta name="referrer" content="no-referrer">
+    
+    <!-- Optimize CSS loading -->
+    <link rel="preload" href="{{ url_for('static', filename='css/styles.css') }}" as="style">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" media="print" onload="this.media='all'">
+    
+    <link rel="icon" type="image/jpg" href="{{ url_for('static', filename='img/logo.jpg') }}">
+    <title>Lavimac Royal Hotel - Luxurious Stay</title>
+    
+    <style>
+        .hero-image-container {
+            width: 95%;
+            left: 2%;
+        }
+        /* Inline critical CSS */
+        body { opacity: 0; transition: opacity 0.3s ease-in; }
+        body.loaded { opacity: 1; }
+
+        /* Set font color to white for specific elements */
+        h1, h2, h3, .month-name, .room-title, .hotel-title {
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="hero-image-container">
+        <!-- Lazy load hero image -->
+        <img src="{{ url_for('static', filename='img/1.jpg') }}" alt="Lavimac Royal Hotel" class="hero-image" loading="lazy">
+        
+        <div class="top">
+            <div class="logo-nav-container">
+                <img src="{{ url_for('static', filename='img/logo.jpg') }}" class="logo" alt="Logo" loading="lazy">
+                <div class="menu-btn">&#9776;</div>
+                <div class="nav-links">
+                    <a href="index.html">HOME</a>
+                    <a href="rooms.html">ROOMS</a>
+                    <a href="facilities.html">FACILITIES</a>
+                    <a href="contact.html">CONTACT</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="text-overlay">
+            <h2><span class="text-animation" style="font-weight: bold; color: #00259efd; font-size: 40px; -webkit-text-stroke: 2px #ffd900; text-stroke: 2px #ffd900;">Lavimac Royal Hotel</span></h2>
+            <p class="text" style="font-weight: bold; font-size: 20px;">Experience the royalty side of life with Us.</p>
+            <a href="rooms.html" class="button">Book Now</a>
+        </div>
+        
+        <div class="about-us">
+            <div class="grid-container">
+                <div class="grid-item1">
+                    <label for="check-in-date" style="font-weight: bold;">Check In</label>
+                    <input class="check-in-date" type="date" id="check-in-date" value="2025-01-01">
+                </div>
+                <div class="grid-item2">
+                    <label for="check-out-date" style="font-weight: bold;">Check Out</label>
+                    <input class="check-out-date" type="date" id="check-out-date" value="2025-01-02">
+                </div>
+                <div class="grid-item3">
+                    <label for="room-select" style="font-weight: bold;">Room</label>
+                    <select id="room-select">
+                        <option value="1" selected>1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                    </select>
+                </div>
+                <div class="grid-item4">
+                    <label for="adults-count" style="font-weight: bold;">Adults</label>
+                    <div class="guest-selection">
+                        <input type="number" id="adults-count" value="2" min="1" max="10">
+                        <label for="children-count">Children</label>
+                        <input type="number" id="children-count" value="0" min="0" max="10">
+                    </div>
+                </div>
+                <div class="grid-item5">
+                    <a href="rooms.html"><button id="search-button">Search Room</button></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="facilities-section">
+        <h2 class="facilities-title">Wide Range of Facilities</h2>
+        <p class="facilities-subtitle">Choose from a wide range of exclusive rooms, hotels, and apartments.</p>
+        
+        <div class="facilities-grid">
+            <!-- Resort -->
+            <div class="facility-item" onclick="return false;">
+                <img src="{{ url_for('static', filename='img/barr.png') }}" alt="Resort" class="facility-icon" loading="lazy">
+                <h3>Bed and Breakfast</h3>
+                <p>Start your day with our complimentary breakfast.</p>
+            </div>
+
+            <!-- Live Band -->
+            <div class="facility-item" onclick="return false;">
+                <img src="{{ url_for('static', filename='img/band.png') }}" alt="Live Band" class="facility-icon" loading="lazy">
+                <h3>Live Band</h3>
+                <p>Enjoy live music performances every weekend at our restaurant, featuring talented local artists.</p>
+            </div>
+
+            <!-- Reservation -->
+            <div class="facility-item" onclick="return false;">
+                <img src="{{ url_for('static', filename='img/reservation.png') }}" alt="Reservation" class="facility-icon" loading="lazy">
+                <h3>Reservation</h3>
+                <p>Easy online and phone booking available 24/7. Special rates for advance reservations.</p>
+            </div>
+
+            <!-- DSTV -->
+            <div class="facility-item" onclick="return false;">
+                <img src="{{ url_for('static', filename='img/casino.png') }}" alt="DSTV" class="facility-icon" loading="lazy">
+                <h3>DSTV</h3>
+                <p>Premium DSTV channels available in all rooms, featuring sports, movies, and entertainment.</p>
+            </div>
+
+            <!-- Room Service -->
+            <div class="facility-item" onclick="return false;">
+                <img src="{{ url_for('static', filename='img/room-service.png') }}" alt="Room Service" class="facility-icon" loading="lazy">
+                <h3>Room Service</h3>
+                <p>24-hour room service available with a diverse menu of local and international dishes.</p>
+            </div>
+
+            <!-- Free Wifi -->
+            <div class="facility-item" onclick="return false;">
+                <img src="{{ url_for('static', filename='img/wifi.png') }}" alt="Free Wifi" class="facility-icon" loading="lazy">
+                <h3>Free Wifi</h3>
+                <p>High-speed internet access available throughout the hotel for all our guests.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="containers">
+    </div>
+    <a href="https://wa.me/233208888123" class="whatsapp-button" target="_blank"><i class="fab fa-whatsapp"></i><span class="tooltip">Chat With Us on WhatsApp</span></a>
+    <footer>
+        <div class="footer-content">
+            <img src="{{ url_for('static', filename='img/logo.jpg') }}" alt="Lavimac Royal Hotel Logo" class="footer-logo" loading="lazy">
+            <p>&copy; 2024 Lavimac Royal Hotel | Powered by Ecstasy Geospatial Services</p>
+        </div>
+    </footer>
+    
+    <!-- Defer script loading -->
+    <script src="{{ url_for('static', filename='js/script.js') }}" defer></script>
+    
+    <script>
+        // Ensure body is visible after page load
+        window.addEventListener('load', function() {
+            document.body.classList.add('loaded');
+        });
+    </script>
+    <script>
+        // Prevent Chrome extension interference
+        if (window.chrome && chrome.runtime && chrome.runtime.id) {
+            console.warn('Chrome extension detected. Blocking potential interference.');
+            window.chrome.runtime.id = null;
+        }
+    </script>
+    <script>
+        const modal = document.getElementById('myModal');
+        const close = document.querySelector('.close');
+
+        document.querySelector('.nav-link').addEventListener('mouseover', function() {
+            modal.style.display = 'block';
+        });
+
+        document.querySelector('.nav-link').addEventListener('mouseout', function() {
+            modal.style.display = 'none';
+        });
+
+        close.addEventListener('click', function() {
+            modal.style.display = 'none';
+        });
+    </script>
+</body>
+</html>

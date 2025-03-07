@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>Facilities - Lavimac Royal Hotel</title>
+    <style>
+        .facilities-container {
+            width: 60%;
+            max-width: 1900px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .stats {
+            display: flex;
+            gap: 3rem;
+            margin-bottom: 2rem;
+        }
+
+        .stat-item {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 3rem;
+            font-weight: bold;
+        }
+
+        .stat-label {
+            font-size: 1.2rem;
+            color: #666;
+        }
+
+        .hotel-description {
+            margin-bottom: 3rem;
+            font-size: 1.5rem;
+            line-height: 1.6;
+            color: #333;
+            max-width: 600px;
+        }
+
+        .more-link {
+            display: inline-block;
+            margin-top: 1rem;
+            color: #333;
+            text-decoration: none;
+            border-bottom: 2px solid #333;
+            padding-bottom: 0.2rem;
+            transition: all 0.3s ease;
+        }
+
+        .more-link:hover {
+            color: #666;
+            border-color: #666;
+        }
+
+        .image-gallery {
+            position: relative;
+            width: 100%;
+            max-width: 1200px;
+            height: 100vh;
+            margin: 4rem auto;
+            padding: 0 2rem;
+        }
+
+        .gallery-image {
+            position: absolute;
+            border-radius: 35px;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        /* First image - forest view */
+        .gallery-image:nth-child(1) {
+            width: 35%;
+            height: 45%;
+            left: 5%;
+            top: 40%;
+            z-index: 1;
+        }
+
+        /* Second image - poolside */
+        .gallery-image:nth-child(2) {
+            width: 45%;
+            height: 60%;
+            right: 5%;
+            top: 0;
+            z-index: 2;
+        }
+
+        /* Third image - sunset */
+        .gallery-image:nth-child(3) {
+            width: 30%;
+            height: 40%;
+            left: 0;
+            top: 0;
+            z-index: 3;
+        }
+
+        /* Fourth image - interior */
+        .gallery-image:nth-child(4) {
+            width: 35%;
+            height: 45%;
+            right: 25%;
+            bottom: 0;
+            z-index: 4;
+        }
+
+        .gallery-image:hover {
+            transform: scale(1.02);
+        }
+
+        .facilities-title {
+            text-align: center;
+            font-family: 'Playfair Display', serif;
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .facilities-subtitle {
+            text-align: center;
+            color: #666;
+            max-width: 800px;
+            margin: 0 auto 4rem;
+            line-height: 1.6;
+            font-size: 1.1rem;
+        }
+
+        .facilities-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 3rem;
+            max-width: 1200px;
+            margin: 0 auto 4rem;
+            padding: 0 2rem;
+        }
+
+        .facility-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .facility-icon {
+            width: 60px;
+            height: 60px;
+            margin-bottom: 1rem;
+        }
+
+        .facility-name {
+            font-weight: 500;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="img/logo.jpg" class="logo1" alt="Logo">
+        <h1 class="kings">Lavimac Royal Hotel</h1>
+    </header>
+    <div class="header-div">
+        
+        <nav>
+            <a href="index.html">HOME</a>
+            <a href="rooms.html">ROOMS</a>
+            <a href="facilities.html">FACILITIES</a>
+            <a href="contact.html">CONTACT</a>
+        </nav>
+    </div>
+    <main class="facilities-container">
+        <div class="hotel-description">
+            <p>Our hotel is located in the heart of the New Forrest. A five stars lifestyle surrounded by the forest.</p>
+            <a href="#" class="more-link">MORE ABOUT US →</a>
+        </div>
+        <div class="image-gallery">
+            <img src="img/ba.jpg" alt="Bar Area" class="gallery-image">
+            <img src="img/live band.jpg" alt="Live Band Performance" class="gallery-image">
+            <img src="img/cont.jpg" alt="Continental Restaurant" class="gallery-image">
+            <img src="img/rec.jpg" alt="Reception Area" class="gallery-image">
+        </div>
+        <h1 class="facilities-title">Hotel Facilities.</h1>
+        <p class="facilities-subtitle">A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart.</p>
+        <a href="https://wa.me/233208888123" class="whatsapp-button" target="_blank">
+            <i class="fab fa-whatsapp"></i>
+            <span class="tooltip">Chat With Us on WhatsApp</span>
+        </a>
+    </main>
+    <footer>
+        <div class="footer-content">
+            <img src="img/logo.jpg" alt="Lavimac Royal Hotel Logo" class="footer-logo">
+            <p>&copy; 2024 Lavimac Royal Hotel | Powered by Ecstasy Geospatial Services</p>
+        </div>
+    </footer>
+</body>
+</html>

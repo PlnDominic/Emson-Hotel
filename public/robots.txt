@@ -1,0 +1,14 @@
+# Allow all crawlers
+User-agent: *
+Allow: /
+
+# Prevent crawling of admin or private areas
+Disallow: /admin/
+Disallow: /private/
+Disallow: /api/
+
+# Sitemap location
+Sitemap: https://lavimacroyalhotel.com/sitemap.xml
+
+# Crawl-delay for all bots
+Crawl-delay: 10

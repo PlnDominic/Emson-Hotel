@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Account - Lavimac Royal Hotel</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <link rel="icon" type="image/jpg" href="{{ url_for('static', filename='img/logo.jpg') }}">
+</head>
+<body>
+    <!-- Header Section -->        
+        <div class="top-bar">
+            <div class="contact-info">
+                <span><i class="fas fa-phone"></i> +233 (0)248-676-262</span>
+                <span><i class="fas fa-map-marker-alt"></i> Oduom Anwomaso</span>
+            </div>
+            <div class="user-actions">
+                <a href="{{ url_for('account') }}" class="btn">My Account</a>
+                <a href="{{ url_for('booking') }}" class="btn book-now">Book Now</a>
+            </div>
+        </div>
+    
+        <header>
+            <img src="{{ url_for('static', filename='img/logo.jpg') }}" alt="Lavimac Royal Hotel" class="logo1">
+            <h1 class="kings">Lavimac Royal Hotel</h1>
+            <div class="">
+                <nav>
+                    <a href="index.html">HOME</a>
+                    <a href="rooms.html">ROOMS</a>
+                    <a href="facilities.html">FACILITIES</a>
+                    <a href="contact.html">CONTACT US</a>
+                </nav>
+            </div>
+        </header>
+
+    <!-- Main Content -->
+    <main class="account-page">
+        <h1>My Account</h1>
+        
+        <div class="account-container">
+            <!-- Login Form -->
+            <div class="login-section">
+                <h2>Login</h2>
+                <form id="loginForm" class="auth-form">
+                    <div class="form-group">
+                        <label for="login-username">Username or Email Address</label>
+                        <input type="text" id="login-username" name="username" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="login-password">Password</label>
+                        <input type="password" id="login-password" name="password" required>
+                    </div>
+                    <div class="form-group">
+                        <label>
+                            <input type="checkbox" name="remember" id="remember-me">
+                            Remember Me
+                        </label>
+                    </div>
+                    <button type="submit" class="btn">Log In</button>
+                    <a href="#" class="forgot-password">Lost your password?</a>
+                </form>
+            </div>
+
+            <!-- Register Form -->
+            <div class="register-section">
+                <h2>Register</h2>
+                <form id="registerForm" class="auth-form">
+                    <div class="form-group">
+                        <label for="register-username">Username</label>
+                        <input type="text" id="register-username" name="username" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="register-email">Email</label>
+                        <input type="email" id="register-email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="register-password">Password</label>
+                        <input type="password" id="register-password" name="password" required>
+                    </div>
+                    <button type="submit" class="btn">Register</button>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/account.js') }}"></script>
+</body>
+</html>

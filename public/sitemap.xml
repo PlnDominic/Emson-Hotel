@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  <url>
+    <loc>https://lavimacroyalhotel.com/</loc>
+    <lastmod>2025-03-03</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://lavimacroyalhotel.com/hotel-exterior.jpg</image:loc>
+      <image:title>Lavimac Royal Hotel - Luxury Accommodation Near KNUST</image:title>
+      <image:caption>Premium hotel accommodation near KNUST campus, Kumasi</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://lavimacroyalhotel.com/rooms</loc>
+    <lastmod>2025-03-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://lavimacroyalhotel.com/rooms/standard-room.jpg</image:loc>
+      <image:title>Comfortable Rooms at Lavimac Royal Hotel</image:title>
+      <image:caption>Modern, well-furnished rooms with all amenities for KNUST visitors</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://lavimacroyalhotel.com/booking</loc>
+    <lastmod>2025-03-03</lastmod>
+    <changefreq>always</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://lavimacroyalhotel.com/contact</loc>
+    <lastmod>2025-03-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://lavimacroyalhotel.com/about</loc>
+    <lastmod>2025-03-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+</urlset>

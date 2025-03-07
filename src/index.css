@@ -1,0 +1,281 @@
+
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes gradientText {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes spinLogo {
+  0% {
+    transform: rotateY(0deg);
+  }
+  100% {
+    transform: rotateY(360deg);
+  }
+}
+
+@keyframes popUp {
+  0% {
+    opacity: 0;
+    transform: scale(0.6) translateY(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+@keyframes shine {
+  0% {
+    transform: translateX(-100%) rotate(45deg);
+  }
+  100% {
+    transform: translateX(100%) rotate(45deg);
+  }
+}
+
+@keyframes text-shimmer {
+  0% {
+    background-position: -200% center;
+  }
+  100% {
+    background-position: 200% center;
+  }
+}
+
+@keyframes float-up {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@layer components {
+  .animate-slide-in {
+    animation: slideInFromLeft 1s ease-out forwards;
+  }
+  
+  .animate-fade-in {
+    animation: fadeIn 1s ease-out forwards;
+  }
+  
+  .animate-delay-200 {
+    animation-delay: 200ms;
+  }
+  
+  .animate-delay-400 {
+    animation-delay: 400ms;
+  }
+
+  .gradient-text {
+    background: linear-gradient(90deg, rgb(255,140,0) 0%, #ff8c00 50%, rgb(255,69,0) 100%);
+    background-size: 200% auto;
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+    animation: gradientText 3s ease infinite;
+  }
+
+  .logo-spin {
+    animation: spinLogo 3s ease-in-out infinite;
+  }
+
+  .pop-up {
+    animation: popUp 0.5s ease-out forwards;
+  }
+
+  .room-card {
+    @apply relative overflow-hidden rounded-lg shadow-lg transition-transform duration-300 hover:scale-105;
+  }
+
+  .room-image {
+    @apply w-full h-64 object-cover transition-transform duration-300;
+  }
+
+  .room-overlay {
+    @apply absolute inset-0 bg-gradient-to-t from-black/80 via-black/50 to-transparent 
+           flex flex-col justify-end p-6 text-white opacity-0 transition-opacity duration-300;
+  }
+
+  .room-card:hover .room-overlay {
+    @apply opacity-100;
+  }
+
+  .room-card:hover .room-image {
+    @apply scale-110;
+  }
+
+  .room-overlay-title {
+    @apply text-2xl font-bold mb-2;
+  }
+
+  .room-overlay-description {
+    @apply text-sm text-gray-200;
+  }
+
+  .amenity-icon {
+    @apply w-5 h-5 text-blue-500;
+  }
+
+  .social-icon {
+    @apply text-gray-400 hover:text-blue-500 transition-colors duration-300;
+  }
+
+  .contact-info {
+    @apply flex items-center space-x-2 text-gray-600;
+  }
+
+  .contact-icon {
+    @apply w-5 h-5 text-blue-500;
+  }
+
+  .nav-link {
+    @apply text-gray-600 hover:text-blue-500 transition-colors duration-300;
+  }
+
+  .footer-link {
+    @apply text-gray-400 hover:text-white transition-colors duration-300;
+  }
+
+  .button-primary {
+    @apply px-6 py-3 bg-blue-500 text-white rounded-lg 
+           hover:bg-blue-600 transition-colors duration-300
+           focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50;
+  }
+
+  .button-secondary {
+    @apply px-6 py-3 border border-gray-300 text-gray-700 rounded-lg
+           hover:bg-gray-50 transition-colors duration-300
+           focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-opacity-50;
+  }
+
+  .input-field {
+    @apply w-full px-4 py-2 border border-gray-300 rounded-lg
+           focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent;
+  }
+
+  .section-title {
+    @apply text-3xl font-bold text-gray-900 mb-8;
+  }
+
+  .card {
+    @apply bg-white rounded-lg shadow-md overflow-hidden;
+  }
+
+  .card-body {
+    @apply p-6;
+  }
+
+  .badge {
+    @apply px-3 py-1 text-sm text-white bg-blue-500 rounded-full;
+  }
+
+  .divider {
+    @apply w-full h-px bg-gray-200 my-8;
+  }
+
+  .container-custom {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  .grid-custom {
+    @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8;
+  }
+
+  .flex-center {
+    @apply flex items-center justify-center;
+  }
+
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-purple-500;
+  }
+
+  .animate-title {
+    @apply text-4xl md:text-7xl font-serif font-bold;
+    background: linear-gradient(
+      to right,
+      #ffffff 20%,
+      #ff7300 30%,
+      #ffffff 40%,
+      #ff7300 50%,
+      #ffffff 60%,
+      #ff7300 70%,
+      #ffffff 80%
+    );
+    background-size: 200% auto;
+    background-clip: text;
+    text-fill-color: transparent;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: text-shimmer 3s linear infinite;
+  }
+
+  .animate-char {
+    @apply inline-block;
+    animation: float-up 0.5s ease-out backwards;
+  }
+
+  .orange-text {
+    color: #ff7300;
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
