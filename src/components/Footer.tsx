@@ -95,7 +95,7 @@ export function Footer() {
             <p className="text-slate-500 text-center md:text-left">
               © {new Date().getFullYear()} Emson Hotel. All Rights Reserved | {' '}
               <a 
-                href="https://wa.me/233542855399" 
+                href="https://www.ecstasytechnologies.com" 
                 className="text-slate-700 hover:text-orange-600 transition-colors"
                 target="_blank" 
                 rel="noopener noreferrer"
