@@ -320,6 +320,12 @@ const Booking = () => {
       formData.append('to', email); // Send to guest's email
       formData.append('subject', 'Booking Confirmation - Emson Hotel');
       formData.append('text', emailTemplate);
+      // The API also emails the hotel a copy with the guest's contact details
+      formData.append('notifyHotel', '1');
+      formData.append('bookingId', bookingId);
+      formData.append('guestName', `${firstName} ${lastName}`.trim());
+      formData.append('guestEmail', email);
+      formData.append('guestPhone', phone);
 
       // If payment proof is available, append it
       if (selectedPaymentMethod === 'momo' && paymentProof) {
@@ -340,21 +346,6 @@ const Booking = () => {
           errorMessage = data.error || data.details || errorMessage;
           throw new Error(errorMessage);
         }
-
-        // Send notification to hotel
-        const hotelNotification = new FormData();
-        hotelNotification.append('to', 'info@emsonhotel.com');
-        hotelNotification.append('subject', `New Booking Alert - #${bookingId}`);
-        hotelNotification.append('text', emailTemplate);
-
-        if (selectedPaymentMethod === 'momo' && paymentProof) {
-          hotelNotification.append('paymentProof', paymentProof);
-        }
-
-        await fetch(import.meta.env.PROD ? '/api/send-email' : 'http://localhost:3001/api/send-email', {
-          method: 'POST',
-          body: hotelNotification
-        });
 
         setFeedback({ type: 'success', message: 'Booking confirmed! Check your email for details.' });
         setActiveStep(4); // Move to completion step
