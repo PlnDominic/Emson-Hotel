@@ -44,13 +44,13 @@ const Contact: React.FC = () => {
               whileHover={{ y: -5 }}
               className="bg-white p-8 rounded-2xl shadow-xl text-center transform transition-all duration-300 hover:shadow-2xl"
             >
-              <div className="w-16 h-16 bg-blue-50 rounded-full flex items-center justify-center mx-auto mb-4 transform transition-all duration-300 hover:rotate-12">
-                <Phone className="w-8 h-8 text-[rgb(0,0,115)]" />
+              <div className="w-16 h-16 bg-orange-50 rounded-full flex items-center justify-center mx-auto mb-4 transform transition-all duration-300 hover:rotate-12">
+                <Phone className="w-8 h-8 text-orange-600" />
               </div>
               <h3 className="text-xl font-serif mb-2">Phone</h3>
               <p className="text-gray-600 mb-2">Feel free to call us anytime for inquiries and bookings.</p>
               <div className="flex flex-col gap-2">
-                <a href="tel:+233535140377" className="text-[rgb(0,0,115)] hover:underline transition-all duration-300 hover:text-blue-700">+233(0)535140377</a>
+                <a href="tel:+233535140377" className="text-orange-600 hover:underline transition-all duration-300 hover:text-orange-700">+233(0)535140377</a>
               </div>
             </motion.div>
 
@@ -62,12 +62,12 @@ const Contact: React.FC = () => {
               whileHover={{ y: -5 }}
               className="bg-white p-8 rounded-2xl shadow-xl text-center transform transition-all duration-300 hover:shadow-2xl"
             >
-              <div className="w-16 h-16 bg-blue-50 rounded-full flex items-center justify-center mx-auto mb-4 transform transition-all duration-300 hover:rotate-12">
-                <Mail className="w-8 h-8 text-[rgb(0,0,115)]" />
+              <div className="w-16 h-16 bg-orange-50 rounded-full flex items-center justify-center mx-auto mb-4 transform transition-all duration-300 hover:rotate-12">
+                <Mail className="w-8 h-8 text-orange-600" />
               </div>
               <h3 className="text-xl font-serif mb-2">Email</h3>
               <p className="text-gray-600 mb-2">Send us an email for any information about our services.</p>
-              <a href="mailto:info.emsonhotel@gmail.com" className="text-[rgb(0,0,115)] hover:underline transition-all duration-300 hover:text-blue-700">info.emsonhotel@gmail.com</a>
+              <a href="mailto:info.emsonhotel@gmail.com" className="text-orange-600 hover:underline transition-all duration-300 hover:text-orange-700">info.emsonhotel@gmail.com</a>
             </motion.div>
 
             {/* Location Card */}
@@ -78,12 +78,12 @@ const Contact: React.FC = () => {
               whileHover={{ y: -5 }}
               className="bg-white p-8 rounded-2xl shadow-xl text-center transform transition-all duration-300 hover:shadow-2xl"
             >
-              <div className="w-16 h-16 bg-blue-50 rounded-full flex items-center justify-center mx-auto mb-4 transform transition-all duration-300 hover:rotate-12">
-                <MapPin className="w-8 h-8 text-[rgb(0,0,115)]" />
+              <div className="w-16 h-16 bg-orange-50 rounded-full flex items-center justify-center mx-auto mb-4 transform transition-all duration-300 hover:rotate-12">
+                <MapPin className="w-8 h-8 text-orange-600" />
               </div>
               <h3 className="text-xl font-serif mb-2">Location</h3>
               <p className="text-gray-600 mb-2">Visit us at our convenient location in Ejisu Ampabame.</p>
-              <a href="https://www.google.com/maps?q=6.68700306617911,-1.5233433053500764" target="_blank" rel="noopener noreferrer" className="text-[rgb(0,0,115)] hover:underline transition-all duration-300 hover:text-blue-700">
+              <a href="https://www.google.com/maps?q=6.68700306617911,-1.5233433053500764" target="_blank" rel="noopener noreferrer" className="text-orange-600 hover:underline transition-all duration-300 hover:text-orange-700">
                 View On Google Map
               </a>
             </motion.div>
@@ -96,7 +96,7 @@ const Contact: React.FC = () => {
             transition={{ duration: 0.5, delay: 0.8 }}
             className="max-w-2xl mx-auto bg-white p-8 rounded-2xl shadow-xl"
           >
-            <h2 className="text-3xl font-serif text-center mb-2 bg-gradient-to-r from-[rgb(0,0,115)] to-blue-600 bg-clip-text text-transparent">Leave us your info</h2>
+            <h2 className="text-3xl font-serif text-center mb-2 bg-gradient-to-r from-black to-orange-600 bg-clip-text text-transparent">Leave us your info</h2>
             <p className="text-gray-600 text-center mb-8">and we will get back to you</p>
             
             <form onSubmit={handleSubmit}>
@@ -111,7 +111,7 @@ const Contact: React.FC = () => {
                   name="fullName"
                   placeholder="Full Name*"
                   required
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[rgb(0,0,115)] focus:border-transparent transition-all duration-300"
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent transition-all duration-300"
                   value={formData.fullName}
                   onChange={handleChange}
                 />
@@ -127,7 +127,7 @@ const Contact: React.FC = () => {
                   name="email"
                   placeholder="Email*"
                   required
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[rgb(0,0,115)] focus:border-transparent transition-all duration-300"
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent transition-all duration-300"
                   value={formData.email}
                   onChange={handleChange}
                 />
@@ -143,7 +143,7 @@ const Contact: React.FC = () => {
                   name="subject"
                   placeholder="Subject*"
                   required
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[rgb(0,0,115)] focus:border-transparent transition-all duration-300"
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent transition-all duration-300"
                   value={formData.subject}
                   onChange={handleChange}
                 />
@@ -159,7 +159,7 @@ const Contact: React.FC = () => {
                   placeholder="Message*"
                   required
                   rows={4}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[rgb(0,0,115)] focus:border-transparent transition-all duration-300 resize-none"
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent transition-all duration-300 resize-none"
                   value={formData.message}
                   onChange={handleChange}
                 />
@@ -168,7 +168,7 @@ const Contact: React.FC = () => {
                 type="submit"
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
-                className="w-full bg-gradient-to-r from-[rgb(0,0,115)] to-blue-600 text-white py-3 rounded-lg transition-all duration-300 hover:shadow-lg font-medium text-lg"
+                className="w-full bg-orange-600 hover:bg-orange-700 text-white py-3 rounded-lg transition-all duration-300 hover:shadow-lg font-medium text-lg"
               >
                 SUBMIT NOW
               </motion.button>
@@ -186,7 +186,7 @@ const Contact: React.FC = () => {
             transition={{ duration: 0.6 }}
             className="text-center mb-12"
           >
-            <h2 className="text-3xl font-serif mb-3 bg-gradient-to-r from-[rgb(0,0,115)] to-blue-600 bg-clip-text text-transparent">
+            <h2 className="text-3xl font-serif mb-3 bg-gradient-to-r from-black to-orange-600 bg-clip-text text-transparent">
               Find Us Here
             </h2>
             <p className="text-gray-600 max-w-2xl mx-auto">
@@ -202,8 +202,8 @@ const Contact: React.FC = () => {
             className="relative w-full max-w-5xl mx-auto"
           >
             {/* Decorative Elements */}
-            <div className="absolute -top-4 -left-4 w-20 h-20 bg-blue-50 rounded-full opacity-50 z-0"></div>
-            <div className="absolute -bottom-4 -right-4 w-32 h-32 bg-blue-50 rounded-full opacity-50 z-0"></div>
+            <div className="absolute -top-4 -left-4 w-20 h-20 bg-orange-50 rounded-full opacity-50 z-0"></div>
+            <div className="absolute -bottom-4 -right-4 w-32 h-32 bg-orange-50 rounded-full opacity-50 z-0"></div>
             
             {/* Map Container */}
             <div className="relative z-10 bg-white rounded-2xl shadow-2xl p-4 overflow-hidden">
@@ -226,7 +226,7 @@ const Contact: React.FC = () => {
               {/* Location Details */}
               <div className="mt-6 p-4 bg-gray-50 rounded-xl">
                 <div className="flex items-center justify-center space-x-2 text-gray-600">
-                  <MapPin className="w-5 h-5 text-[rgb(0,0,115)]" />
+                  <MapPin className="w-5 h-5 text-orange-600" />
                   <p className="text-sm">
                     Click on the map to get directions to our location
                   </p>

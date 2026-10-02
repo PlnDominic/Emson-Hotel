@@ -18,7 +18,7 @@ const RoomCard: React.FC<{
     <div className="relative h-60 sm:h-72 overflow-hidden">
       <img src={image} alt={alt} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
       <div className="absolute top-4 right-4 bg-white/95 backdrop-blur-sm rounded-full px-3.5 py-1.5 shadow-sm">
-        <span className="text-[15px] font-bold text-[rgb(0,0,115)]">GH₵{price}</span>
+        <span className="text-[15px] font-bold text-orange-600">GH₵{price}</span>
         <span className="text-[12px] text-slate-500 ml-1">/ night</span>
       </div>
     </div>
@@ -36,7 +36,7 @@ const RoomCard: React.FC<{
       </div>
       <Link
         to="/booking"
-        className="mt-auto block w-full text-center bg-[rgb(0,0,115)] text-white text-[14px] font-semibold py-3 rounded-lg hover:bg-[rgb(0,0,150)] transition-colors"
+        className="mt-auto block w-full text-center bg-orange-600 text-white text-[14px] font-semibold py-3 rounded-lg hover:bg-orange-700 transition-colors"
       >
         Book Now
       </Link>
@@ -100,7 +100,7 @@ const Rooms: React.FC = () => {
             </div>
             <Link
               to="/booking"
-              className="shrink-0 bg-orange-600 hover:bg-orange-700 text-white text-[14px] font-semibold px-7 py-3 rounded-lg transition-colors"
+              className="shrink-0 bg-black hover:bg-neutral-800 text-white text-[14px] font-semibold px-7 py-3 rounded-lg transition-colors"
             >
               Check Availability
             </Link>

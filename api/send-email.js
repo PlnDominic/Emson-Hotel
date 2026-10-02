@@ -113,7 +113,7 @@ export default async function handler(req, res) {
     if (notifyHotel) {
       const contactBlock = `
         <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto 20px; padding: 15px; background: #fff8e1; border-radius: 6px;">
-          <h2 style="margin-top: 0; color: #1a237e;">New booking${bookingId ? ` #${escapeHtml(bookingId)}` : ''}</h2>
+          <h2 style="margin-top: 0; color: #c2410c;">New booking${bookingId ? ` #${escapeHtml(bookingId)}` : ''}</h2>
           <p><strong>Guest:</strong> ${escapeHtml(guestName)}</p>
           <p><strong>Email:</strong> ${escapeHtml(guestEmail || to)}</p>
           <p><strong>Phone:</strong> ${escapeHtml(guestPhone)}</p>

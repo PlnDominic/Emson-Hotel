@@ -189,7 +189,7 @@ function App() {
                         }}
                       />
                       {/* Gradient Overlay */}
-                      <div className="absolute inset-0 bg-gradient-to-r from-blue-900/80 via-blue-800/50 to-transparent bg-gradient-animate"></div>
+                      <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/50 to-transparent bg-gradient-animate"></div>
                       {/* Animated Particles */}
                       <div className="absolute inset-0 opacity-30">
                         <div className="firefly"></div>
@@ -217,7 +217,7 @@ function App() {
                         </p>
                         
                         <div className="flex flex-wrap gap-3 animate-fadeInUp" style={{ animationDelay: '0.6s' }}>
-                          <button className="px-4 py-2 bg-white text-blue-900 rounded-lg hover:bg-blue-50 transition-all duration-300 flex items-center gap-2 group relative overflow-hidden text-sm">
+                          <button className="px-4 py-2 bg-white text-black rounded-lg hover:bg-orange-50 transition-all duration-300 flex items-center gap-2 group relative overflow-hidden text-sm">
                             <span className="relative z-10">Book Now</span>
                             <svg 
                               className="w-4 h-4 transform transition-transform duration-300 group-hover:translate-x-1 relative z-10" 
@@ -227,18 +227,18 @@ function App() {
                             >
                               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
                             </svg>
-                            <div className="absolute inset-0 bg-gradient-to-r from-blue-100 to-white opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                            <div className="absolute inset-0 bg-gradient-to-r from-orange-100 to-white opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                           </button>
                           
                           <button className="px-4 py-2 border-2 border-white text-white rounded-lg hover:bg-white/10 transition-all duration-300 group text-sm">
-                            <span className="group-hover:text-blue-200 transition-colors duration-300">View Our Rooms</span>
+                            <span className="group-hover:text-orange-300 transition-colors duration-300">View Our Rooms</span>
                           </button>
                           
                           <div className="flex items-center gap-3 ml-auto animate-fadeInUp" style={{ animationDelay: '0.8s' }}>
                             <div className="flex -space-x-3">
-                              <div className="w-6 h-6 rounded-full bg-blue-400 border-2 border-white"></div>
-                              <div className="w-6 h-6 rounded-full bg-blue-500 border-2 border-white"></div>
-                              <div className="w-6 h-6 rounded-full bg-blue-600 border-2 border-white"></div>
+                              <div className="w-6 h-6 rounded-full bg-orange-400 border-2 border-white"></div>
+                              <div className="w-6 h-6 rounded-full bg-orange-500 border-2 border-white"></div>
+                              <div className="w-6 h-6 rounded-full bg-orange-600 border-2 border-white"></div>
                             </div>
                             <span className="text-xs opacity-90">300+ Happy Guests</span>
                           </div>

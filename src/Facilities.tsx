@@ -33,10 +33,10 @@ const FacilityCard: React.FC<FacilityProps> = ({ title, description, icon, image
     </div>
     <div className="p-6 transform translate-y-0 hover:translate-y-[-5px] transition-transform duration-300">
       <div className="flex items-center mb-2">
-        <div className="text-[rgb(0,0,115)] mr-2 transform rotate-0 hover:rotate-12 transition-transform duration-300">
+        <div className="text-orange-600 mr-2 transform rotate-0 hover:rotate-12 transition-transform duration-300">
           {icon}
         </div>
-        <h3 className="text-xl font-serif text-gray-900 hover:text-[rgb(0,0,115)] transition-colors duration-300">{title}</h3>
+        <h3 className="text-xl font-serif text-gray-900 hover:text-orange-600 transition-colors duration-300">{title}</h3>
       </div>
       <p className="text-gray-600 text-sm leading-relaxed">{description}</p>
     </div>
@@ -114,7 +114,7 @@ const Facilities: React.FC = () => {
                }}>
             <h2 className="text-4xl font-serif text-gray-900 mb-4 relative inline-block">
               World-Class Facilities
-              <div className="absolute bottom-0 left-0 w-full h-1 bg-[rgb(0,0,115)] transform scale-x-0 transition-transform duration-300 group-hover:scale-x-100" />
+              <div className="absolute bottom-0 left-0 w-full h-1 bg-orange-600 transform scale-x-0 transition-transform duration-300 group-hover:scale-x-100" />
             </h2>
             <p className="text-gray-600 text-lg max-w-2xl mx-auto">
               Discover our range of premium amenities designed to make your stay exceptional and memorable.

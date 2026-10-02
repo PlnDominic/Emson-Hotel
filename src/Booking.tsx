@@ -160,7 +160,7 @@ const ConfirmationModal: React.FC<{
               setShowConfirmModal(false);
               handleCompleteBooking();
             }}
-            className="w-full sm:w-auto px-4 py-2 bg-[rgb(0,0,115)] text-white rounded-lg text-sm sm:text-base hover:bg-[rgb(0,0,150)] transition-colors"
+            className="w-full sm:w-auto px-4 py-2 bg-orange-600 text-white rounded-lg text-sm sm:text-base hover:bg-orange-700 transition-colors"
           >
             Confirm Booking
           </button>
@@ -288,31 +288,31 @@ const Booking = () => {
       // Create HTML email content
       const emailTemplate = `
         <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px; background-color: #ffffff; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
-          <h1 style="color: #1a237e; text-align: center; margin-bottom: 30px; font-size: 24px;">Emson Hotel - Booking Confirmation</h1>
+          <h1 style="color: #c2410c; text-align: center; margin-bottom: 30px; font-size: 24px;">Emson Hotel - Booking Confirmation</h1>
 
           <p style="color: #333; margin-bottom: 20px;">Dear ${firstName} ${lastName || ''},</p>
 
           <p style="color: #333; line-height: 1.6;">Thank you for booking with Emson Hotel. We are happy to confirm that your booking has been successfully placed and we look forward to seeing you on ${new Date(checkInDate).toLocaleDateString()} for your ${calculateNumberOfNights()} nights stay with us. For full details of your reservation please see below:</p>
 
           <div style="background-color: #f8f9fa; padding: 25px; margin: 30px 0; border-radius: 6px;">
-            <h2 style="color: #1a237e; margin-bottom: 20px; font-size: 20px;">Booking Details</h2>
+            <h2 style="color: #c2410c; margin-bottom: 20px; font-size: 20px;">Booking Details</h2>
             
             <div style="color: #333; line-height: 1.8;">
-              <p><strong style="color: #1a237e;">Booking ID:</strong> #${bookingId}</p>
-              <p><strong style="color: #1a237e;">Room Type:</strong> ${selectedRoom.type}</p>
-              <p><strong style="color: #1a237e;">Check-in:</strong> ${new Date(checkInDate).toLocaleDateString()}</p>
-              <p><strong style="color: #1a237e;">Check-out:</strong> ${new Date(checkOutDate).toLocaleDateString()}</p>
-              <p><strong style="color: #1a237e;">Number of Nights:</strong> ${calculateNumberOfNights()}</p>
-              <p><strong style="color: #1a237e;">Guests:</strong> ${adultCount} Adults, ${childCount} Children</p>
-              <p><strong style="color: #1a237e;">Total Amount:</strong> ${selectedRoom.currency}${calculateTotalPrice().toFixed(2)}</p>
-              <p><strong style="color: #1a237e;">Payment Method:</strong> ${selectedPaymentMethod === 'momo' ? 'Mobile Money' : 'Pay on Arrival'}</p>
+              <p><strong style="color: #c2410c;">Booking ID:</strong> #${bookingId}</p>
+              <p><strong style="color: #c2410c;">Room Type:</strong> ${selectedRoom.type}</p>
+              <p><strong style="color: #c2410c;">Check-in:</strong> ${new Date(checkInDate).toLocaleDateString()}</p>
+              <p><strong style="color: #c2410c;">Check-out:</strong> ${new Date(checkOutDate).toLocaleDateString()}</p>
+              <p><strong style="color: #c2410c;">Number of Nights:</strong> ${calculateNumberOfNights()}</p>
+              <p><strong style="color: #c2410c;">Guests:</strong> ${adultCount} Adults, ${childCount} Children</p>
+              <p><strong style="color: #c2410c;">Total Amount:</strong> ${selectedRoom.currency}${calculateTotalPrice().toFixed(2)}</p>
+              <p><strong style="color: #c2410c;">Payment Method:</strong> ${selectedPaymentMethod === 'momo' ? 'Mobile Money' : 'Pay on Arrival'}</p>
             </div>
           </div>
 
           <div style="background-color: #f0f2f5; padding: 25px; margin-top: 30px; border-radius: 6px;">
-            <h3 style="color: #1a237e; margin-bottom: 15px; font-size: 18px;">Need assistance?</h3>
+            <h3 style="color: #c2410c; margin-bottom: 15px; font-size: 18px;">Need assistance?</h3>
             <p style="color: #333; margin-bottom: 10px;">Contact us at:</p>
-            <p style="color: #333; margin-bottom: 5px;">Email: <a href="mailto:info.emsonhotel@gmail.com" style="color: #1a237e; text-decoration: none;">info.emsonhotel@gmail.com</a></p>
+            <p style="color: #333; margin-bottom: 5px;">Email: <a href="mailto:info.emsonhotel@gmail.com" style="color: #c2410c; text-decoration: none;">info.emsonhotel@gmail.com</a></p>
             <p style="color: #333;">Phone: +233(0)535140377</p>
           </div>
         </div>
@@ -377,7 +377,7 @@ const Booking = () => {
           subject: 'Booking Confirmation - Emson Hotel',
           html: `
             <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
-              <h1 style="color: #1a365d; text-align: center; padding: 20px;">Booking Confirmation</h1>
+              <h1 style="color: #c2410c; text-align: center; padding: 20px;">Booking Confirmation</h1>
               <div style="background-color: #f7fafc; padding: 20px; border-radius: 8px;">
                 <h2 style="color: #2d3748;">Thank you for booking with Emson Hotel!</h2>
                 <div style="margin: 20px 0;">
@@ -530,10 +530,10 @@ Thank you for choosing Emson!`
     setActiveStep(1);
   }, []);
 
-  const navy = 'bg-[rgb(0,0,115)] hover:bg-[rgb(0,0,150)] text-white';
+  const primary = 'bg-orange-600 hover:bg-orange-700 text-white';
   const card = 'bg-white rounded-2xl border border-slate-200 shadow-sm';
   const label = 'block text-[13px] font-medium text-slate-600 mb-1.5';
-  const field = 'w-full px-3.5 py-2.5 bg-white border border-slate-300 rounded-lg text-[14px] text-slate-900 placeholder:text-slate-400 focus:outline-none focus:border-[rgb(0,0,115)] focus:ring-2 focus:ring-[rgb(0,0,115)]/15 transition';
+  const field = 'w-full px-3.5 py-2.5 bg-white border border-slate-300 rounded-lg text-[14px] text-slate-900 placeholder:text-slate-400 focus:outline-none focus:border-orange-500 focus:ring-2 focus:ring-orange-500/20 transition';
   const toIso = (day: number) => new Date(currentMonth.getFullYear(), currentMonth.getMonth(), day).toISOString().split('T')[0];
 
   return (
@@ -551,7 +551,7 @@ Thank you for choosing Emson!`
       
       {isLoading && (
         <div className="fixed inset-0 bg-white/70 backdrop-blur-sm flex items-center justify-center z-50">
-          <div className="animate-spin rounded-full h-16 w-16 border-4 border-slate-200 border-t-[rgb(0,0,115)]"></div>
+          <div className="animate-spin rounded-full h-16 w-16 border-4 border-slate-200 border-t-orange-600"></div>
         </div>
       )}
 
@@ -569,16 +569,16 @@ Thank you for choosing Emson!`
                 <div key={step.number} className={`flex items-center ${index < steps.length - 1 ? 'flex-1' : ''}`}>
                   <div className={`flex items-center justify-center w-8 h-8 sm:w-11 sm:h-11 rounded-full shrink-0 transition-all duration-300 ${
                     activeStep > step.number
-                      ? 'bg-orange-500 text-white'
+                      ? 'bg-black text-white'
                       : activeStep === step.number
-                      ? 'bg-[rgb(0,0,115)] text-white ring-4 ring-[rgb(0,0,115)]/10'
+                      ? 'bg-orange-600 text-white ring-4 ring-orange-600/15'
                       : 'bg-slate-100 text-slate-400'
                   }`}>
                     <step.icon className="w-4 h-4 sm:w-5 sm:h-5" />
                   </div>
                   {index < steps.length - 1 && (
                     <div className={`h-0.5 flex-1 mx-1.5 sm:mx-4 rounded-full transition-all duration-300 ${
-                      activeStep > step.number ? 'bg-orange-500' : 'bg-slate-200'
+                      activeStep > step.number ? 'bg-black' : 'bg-slate-200'
                     }`} />
                   )}
                 </div>
@@ -629,7 +629,7 @@ Thank you for choosing Emson!`
                       </select>
                     </div>
                     <button
-                      className={`mt-2 w-full py-3 rounded-lg text-[14px] font-semibold transition-colors ${navy} disabled:bg-slate-300 disabled:cursor-not-allowed`}
+                      className={`mt-2 w-full py-3 rounded-lg text-[14px] font-semibold transition-colors ${primary} disabled:bg-slate-300 disabled:cursor-not-allowed`}
                       onClick={handleSearch}
                       disabled={!checkInDate || !checkOutDate}
                     >
@@ -673,9 +673,9 @@ Thank you for choosing Emson!`
                               : past
                               ? 'text-slate-300 cursor-not-allowed'
                               : isEnd
-                              ? 'bg-[rgb(0,0,115)] text-white font-semibold cursor-pointer'
+                              ? 'bg-orange-600 text-white font-semibold cursor-pointer'
                               : inRange
-                              ? 'bg-orange-100 text-orange-800 cursor-pointer'
+                              ? 'bg-orange-50 text-orange-800 cursor-pointer'
                               : 'text-slate-700 cursor-pointer hover:bg-slate-100'
                           }`}
                           onClick={() => {
@@ -716,7 +716,7 @@ Thank you for choosing Emson!`
                     <h2 className="text-xl font-semibold text-slate-900">Select Your Room</h2>
                     <p className="text-slate-500 text-[14px] mt-1">Choose from our luxurious room options</p>
                   </div>
-                  <button onClick={() => setActiveStep(1)} className="text-[14px] text-[rgb(0,0,115)] hover:underline flex items-center shrink-0">
+                  <button onClick={() => setActiveStep(1)} className="text-[14px] text-black hover:text-orange-600 hover:underline flex items-center shrink-0">
                     <ChevronLeft size={16} /> Change dates
                   </button>
                 </div>
@@ -750,7 +750,7 @@ Thank you for choosing Emson!`
                                 <p className="text-slate-500 mt-1 text-[14px]">Experience luxury and comfort</p>
                               </div>
                               <div className="text-right shrink-0">
-                                <div className="text-[18px] font-bold text-[rgb(0,0,115)]">{room.currency}{room.price}</div>
+                                <div className="text-[18px] font-bold text-orange-600">{room.currency}{room.price}</div>
                                 <div className="text-[12px] text-slate-500">per night</div>
                               </div>
                             </div>
@@ -763,7 +763,7 @@ Thank you for choosing Emson!`
                                     setSelectedRoom(room);
                                     setSelectedRoomCount(parseInt(e.target.value));
                                   }}
-                                  className="bg-white text-[14px] text-slate-900 border border-slate-300 rounded-lg px-2.5 py-1.5 focus:outline-none focus:border-[rgb(0,0,115)]"
+                                  className="bg-white text-[14px] text-slate-900 border border-slate-300 rounded-lg px-2.5 py-1.5 focus:outline-none focus:border-orange-500"
                                   onClick={(e) => e.stopPropagation()}
                                 >
                                   {[1, 2, 3].map(num => (
@@ -786,7 +786,7 @@ Thank you for choosing Emson!`
                                   setShowPayment(true);
                                   setActiveStep(3);
                                 }}
-                                className={`${navy} text-[14px] font-semibold px-6 py-2.5 rounded-lg transition-colors`}
+                                className={`${primary} text-[14px] font-semibold px-6 py-2.5 rounded-lg transition-colors`}
                               >
                                 Book Now
                               </button>
@@ -808,7 +808,7 @@ Thank you for choosing Emson!`
                     <h2 className="text-xl font-semibold text-slate-900">Payment Details</h2>
                     <p className="text-slate-500 text-[14px] mt-1">Complete your booking with secure payment</p>
                   </div>
-                  <button onClick={() => setActiveStep(2)} className="text-[14px] text-[rgb(0,0,115)] hover:underline flex items-center shrink-0">
+                  <button onClick={() => setActiveStep(2)} className="text-[14px] text-black hover:text-orange-600 hover:underline flex items-center shrink-0">
                     <ChevronLeft size={16} /> Change room
                   </button>
                 </div>
@@ -874,7 +874,7 @@ Thank you for choosing Emson!`
                           <label
                             key={method.id}
                             className={`flex items-start gap-3 p-4 rounded-xl border cursor-pointer transition-all ${
-                              active ? 'border-[rgb(0,0,115)] bg-[rgb(0,0,115)]/[0.04] ring-1 ring-[rgb(0,0,115)]' : 'border-slate-200 hover:border-slate-300 hover:bg-slate-50'
+                              active ? 'border-orange-500 bg-orange-50/60 ring-1 ring-orange-500' : 'border-slate-200 hover:border-slate-300 hover:bg-slate-50'
                             }`}
                           >
                             <input
@@ -882,7 +882,7 @@ Thank you for choosing Emson!`
                               name="paymentMethod"
                               checked={active}
                               onChange={() => handlePaymentMethodChange(method.id)}
-                              className="mt-0.5 accent-[rgb(0,0,115)]"
+                              className="mt-0.5 accent-orange-600"
                             />
                             <div>
                               <p className="text-[14px] font-medium text-slate-900">{method.title}</p>
@@ -902,7 +902,7 @@ Thank you for choosing Emson!`
                         <input
                           type="file"
                           onChange={handleFileUpload}
-                          className="w-full text-[14px] text-slate-600 file:mr-4 file:py-2 file:px-4 file:rounded-lg file:border-0 file:text-[14px] file:font-medium file:bg-[rgb(0,0,115)] file:text-white hover:file:bg-[rgb(0,0,150)] file:cursor-pointer"
+                          className="w-full text-[14px] text-slate-600 file:mr-4 file:py-2 file:px-4 file:rounded-lg file:border-0 file:text-[14px] file:font-medium file:bg-black file:text-white hover:file:bg-neutral-800 file:cursor-pointer"
                         />
                       </div>
                     )}
@@ -958,7 +958,7 @@ Thank you for choosing Emson!`
                   <div className="flex flex-col sm:flex-row gap-3 justify-center pt-2">
                     <button
                       onClick={() => window.location.reload()}
-                      className={`px-6 py-3 rounded-lg font-semibold text-[14px] transition-colors flex items-center justify-center gap-2 ${navy}`}
+                      className={`px-6 py-3 rounded-lg font-semibold text-[14px] transition-colors flex items-center justify-center gap-2 ${primary}`}
                     >
                       <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 4v16m8-8H4"></path>
@@ -967,7 +967,7 @@ Thank you for choosing Emson!`
                     </button>
                     <a
                       href="/"
-                      className="px-6 py-3 bg-white border border-slate-300 text-slate-700 rounded-lg font-semibold text-[14px] hover:bg-slate-50 transition-colors flex items-center justify-center gap-2"
+                      className="px-6 py-3 bg-black text-white rounded-lg font-semibold text-[14px] hover:bg-neutral-800 transition-colors flex items-center justify-center gap-2"
                     >
                       <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path>
@@ -981,13 +981,13 @@ Thank you for choosing Emson!`
                   <h4 className="font-semibold text-slate-900 mb-1">Need Help?</h4>
                   <p className="text-slate-500 text-[14px]">Contact our support team</p>
                   <div className="flex flex-col sm:flex-row justify-center gap-3 sm:gap-6 mt-3 text-[14px]">
-                    <a href="tel:+233535140377" className="text-[rgb(0,0,115)] hover:text-orange-600 flex items-center justify-center">
+                    <a href="tel:+233535140377" className="text-black hover:text-orange-600 flex items-center justify-center">
                       <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
                       </svg>
                       +233(0)535140377
                     </a>
-                    <a href="mailto:info.emsonhotel@gmail.com" className="text-[rgb(0,0,115)] hover:text-orange-600 flex items-center justify-center">
+                    <a href="mailto:info.emsonhotel@gmail.com" className="text-black hover:text-orange-600 flex items-center justify-center">
                       <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
                       </svg>
