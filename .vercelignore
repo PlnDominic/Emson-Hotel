@@ -1,0 +1,8 @@
+# Python backend is not deployed to Vercel; its requirements.txt makes Vercel try a Python install
+requirements.txt
+backend
+venv
+__pycache__
+instance
+models
+routes
