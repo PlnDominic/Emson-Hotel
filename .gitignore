@@ -49,3 +49,5 @@ node_modules/
 >>>>>>> origin/master
 
 .vercel
+.env.*
+!.env.example
