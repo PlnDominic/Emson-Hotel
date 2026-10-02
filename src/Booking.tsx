@@ -313,7 +313,7 @@ const Booking = () => {
             <h3 style="color: #1a237e; margin-bottom: 15px; font-size: 18px;">Need assistance?</h3>
             <p style="color: #333; margin-bottom: 10px;">Contact us at:</p>
             <p style="color: #333; margin-bottom: 5px;">Email: <a href="mailto:info.emsonhotel@gmail.com" style="color: #1a237e; text-decoration: none;">info.emsonhotel@gmail.com</a></p>
-            <p style="color: #333;">Phone: +233 249676262</p>
+            <p style="color: #333;">Phone: +233(0)535140377</p>
           </div>
         </div>
       `;
@@ -391,7 +391,7 @@ const Booking = () => {
                 <div style="background-color: #e2e8f0; padding: 15px; border-radius: 4px; margin-top: 20px;">
                   <p style="margin: 0;"><strong>Need assistance?</strong></p>
                   <p style="margin: 5px 0;">Contact us at: info.emsonhotel@gmail.com</p>
-                  <p style="margin: 5px 0;">Phone: +233 248676262</p>
+                  <p style="margin: 5px 0;">Phone: +233(0)535140377</p>
                 </div>
               </div>
               <div style="text-align: center; margin-top: 20px; color: #718096; font-size: 0.875rem;">
@@ -896,7 +896,7 @@ Thank you for choosing Emson!`
                     {selectedPaymentMethod === 'momo' && (
                       <div className="mb-6 rounded-xl border border-slate-200 bg-slate-50 p-4">
                         <p className="text-[14px] text-slate-700 mb-3">
-                          Please make payment to: <span className="font-semibold text-slate-900">+233 248676262 OR +233 551390039</span>
+                          Please make payment to: <span className="font-semibold text-slate-900">+233(0)535140377</span>
                         </p>
                         <label className={label}>Upload Payment Proof</label>
                         <input
@@ -981,11 +981,11 @@ Thank you for choosing Emson!`
                   <h4 className="font-semibold text-slate-900 mb-1">Need Help?</h4>
                   <p className="text-slate-500 text-[14px]">Contact our support team</p>
                   <div className="flex flex-col sm:flex-row justify-center gap-3 sm:gap-6 mt-3 text-[14px]">
-                    <a href="tel:+233248676262" className="text-[rgb(0,0,115)] hover:text-orange-600 flex items-center justify-center">
+                    <a href="tel:+233535140377" className="text-[rgb(0,0,115)] hover:text-orange-600 flex items-center justify-center">
                       <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
                       </svg>
-                      +233 248676262
+                      +233(0)535140377
                     </a>
                     <a href="mailto:info.emsonhotel@gmail.com" className="text-[rgb(0,0,115)] hover:text-orange-600 flex items-center justify-center">
                       <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">

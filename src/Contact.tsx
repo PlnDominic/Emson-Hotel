@@ -50,8 +50,7 @@ const Contact: React.FC = () => {
               <h3 className="text-xl font-serif mb-2">Phone</h3>
               <p className="text-gray-600 mb-2">Feel free to call us anytime for inquiries and bookings.</p>
               <div className="flex flex-col gap-2">
-                <a href="tel:+233(0)248676262" className="text-[rgb(0,0,115)] hover:underline transition-all duration-300 hover:text-blue-700">+233(0)248676262</a>
-                <a href="tel:+233(0)551390039" className="text-[rgb(0,0,115)] hover:underline transition-all duration-300 hover:text-blue-700">+233(0)551390039</a>
+                <a href="tel:+233535140377" className="text-[rgb(0,0,115)] hover:underline transition-all duration-300 hover:text-blue-700">+233(0)535140377</a>
               </div>
             </motion.div>
 

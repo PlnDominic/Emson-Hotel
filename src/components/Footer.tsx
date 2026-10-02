@@ -52,10 +52,7 @@ export function Footer() {
               </p>
               <div className="space-y-2">
                 <p className="flex items-center text-gray-300">
-                  <MdPhone className="mr-2" /> +233(0)248676262
-                </p>
-                <p className="flex items-center text-gray-300">
-                  <MdPhone className="mr-2" /> +233(0)551390039
+                  <MdPhone className="mr-2" /> +233(0)535140377
                 </p>
               </div>
               <p className="flex items-center text-gray-300">
