@@ -9,9 +9,8 @@ export const config = {
   },
 };
 
-// Inbox that receives new-booking notifications. emsonhotel.com has no MX
-// records, so default to the (working) sending account rather than info@.
-const getHotelEmail = () => process.env.HOTEL_EMAIL || process.env.EMAIL_USER;
+// Inbox that receives new-booking notifications (overridable via HOTEL_EMAIL)
+const getHotelEmail = () => process.env.HOTEL_EMAIL || 'info.emsonhotel@gmail.com';
 
 const escapeHtml = (value = '') =>
   String(value).replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[c]);

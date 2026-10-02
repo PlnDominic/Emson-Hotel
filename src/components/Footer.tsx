@@ -59,7 +59,7 @@ export function Footer() {
                 </p>
               </div>
               <p className="flex items-center text-gray-300">
-                <MdEmail className="mr-2" /> info@emsonhotel.com
+                <MdEmail className="mr-2" /> info.emsonhotel@gmail.com
               </p>
             </div>
           </div>

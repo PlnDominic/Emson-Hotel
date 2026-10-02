@@ -68,7 +68,7 @@ const Contact: React.FC = () => {
               </div>
               <h3 className="text-xl font-serif mb-2">Email</h3>
               <p className="text-gray-600 mb-2">Send us an email for any information about our services.</p>
-              <a href="mailto:info@emsonhotel.com" className="text-[rgb(0,0,115)] hover:underline transition-all duration-300 hover:text-blue-700">info@emsonhotel.com</a>
+              <a href="mailto:info.emsonhotel@gmail.com" className="text-[rgb(0,0,115)] hover:underline transition-all duration-300 hover:text-blue-700">info.emsonhotel@gmail.com</a>
             </motion.div>
 
             {/* Location Card */}

@@ -309,7 +309,7 @@ const Booking = () => {
           <div style="background-color: #f0f2f5; padding: 25px; margin-top: 30px; border-radius: 6px;">
             <h3 style="color: #1a237e; margin-bottom: 15px; font-size: 18px;">Need assistance?</h3>
             <p style="color: #333; margin-bottom: 10px;">Contact us at:</p>
-            <p style="color: #333; margin-bottom: 5px;">Email: <a href="mailto:info@emsonhotel.com" style="color: #1a237e; text-decoration: none;">info@emsonhotel.com</a></p>
+            <p style="color: #333; margin-bottom: 5px;">Email: <a href="mailto:info.emsonhotel@gmail.com" style="color: #1a237e; text-decoration: none;">info.emsonhotel@gmail.com</a></p>
             <p style="color: #333;">Phone: +233 249676262</p>
           </div>
         </div>
@@ -387,7 +387,7 @@ const Booking = () => {
                 </div>
                 <div style="background-color: #e2e8f0; padding: 15px; border-radius: 4px; margin-top: 20px;">
                   <p style="margin: 0;"><strong>Need assistance?</strong></p>
-                  <p style="margin: 5px 0;">Contact us at: support@emsonhotel.com</p>
+                  <p style="margin: 5px 0;">Contact us at: info.emsonhotel@gmail.com</p>
                   <p style="margin: 5px 0;">Phone: +233 248676262</p>
                 </div>
               </div>
@@ -493,7 +493,7 @@ Thank you for choosing Emson!`
           'Accept': 'application/json'
         },
         body: JSON.stringify({
-          to: 'info@emsonhotel.com',
+          to: 'info.emsonhotel@gmail.com',
           subject: 'New Booking - Emson Hotel',
           text: `New booking details:
 Room: ${selectedRoom.type}
@@ -1001,7 +1001,7 @@ Thank you for choosing Emson!`
                         </svg>
                         +233 248676262
                       </a>
-                      <a href="mailto:info@emsonhotel.com" className="text-indigo-600 hover:text-indigo-800 flex items-center">
+                      <a href="mailto:info.emsonhotel@gmail.com" className="text-indigo-600 hover:text-indigo-800 flex items-center">
                         <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
                         </svg>
